@@ -1,16 +1,19 @@
 <?php defined('SYSPATH') or die('No direct script access.');
-
+/**
+ * AWS Configuration
+ */
 return array(
-	// Credentials for the development environment.
-	'development' => array(
+
+	// Default instance configuration
+	'default' => array(
 
 		// Amazon Web Services Key. Found in the AWS Security Credentials. You can also pass
 		// this value as the first parameter to a service constructor.
-		'key' => 'development-key',
+		'key' => NULL,
 
 		// Amazon Web Services Secret Key. Found in the AWS Security Credentials. You can also
 		// pass this value as the second parameter to a service constructor.
-		'secret' => 'development-secret',
+		'secret' => NULL,
 
 		// This option allows you to configure a preferred storage type to use for caching by
 		// default. This can be changed later using the set_cache_config() method.
@@ -29,7 +32,4 @@ return array(
 		// Leave this set to `false` if you're not sure.
 		'certificate_authority' => FALSE,
 	),
-
-	// Specify a default credential set to use if there are more than one.
-	'@default' => 'development'
 );
